@@ -14,6 +14,6 @@ public class MyBeanWithDependencyImplement implements MyBeanWithDependency{
     public void printWithDependency() {
         int numero = 10;
         System.out.println("La suma de tu numero con la función es:  " + myOperation.sum(numero));
-        System.out.println("HOLA DESDE MI PROPIA DEPENDENCIA CON BEAN ");
+        System.out.println("HOLA DESDE MI DEPENDENCIA ORIGINAL ");
     }
 }

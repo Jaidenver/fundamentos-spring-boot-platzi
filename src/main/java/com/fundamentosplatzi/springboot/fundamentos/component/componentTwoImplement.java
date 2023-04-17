@@ -10,4 +10,6 @@ public class componentTwoImplement implements ComponentDependency{
     public void saludar() {
         System.out.println("Hola desde mi componente dos");
     }
+
+
 }

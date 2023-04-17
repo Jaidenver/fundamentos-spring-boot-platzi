@@ -24,7 +24,7 @@ public class FundamentosApplication implements CommandLineRunner {
 
 
 
-	public FundamentosApplication(@Qualifier("componentTwoImplement") ComponentDependency componentDependency, MyBean myBean, MyBeanWithDependency myBeanWithDependency, MyOwnDependency myOwnDependency, MyBeanWithProperties myBeanWithProperties, MyBeanWithProperties2 myBeanWithProperties2, UserPojo userpojo){
+	public FundamentosApplication(@Qualifier("componentImplement") ComponentDependency componentDependency, MyBean myBean, MyBeanWithDependency myBeanWithDependency, MyOwnDependency myOwnDependency, MyBeanWithProperties myBeanWithProperties, MyBeanWithProperties2 myBeanWithProperties2, UserPojo userpojo){
 		this.componentDependency = componentDependency;
 		this.myBean = myBean;
 		this.myBeanWithDependency = myBeanWithDependency;
