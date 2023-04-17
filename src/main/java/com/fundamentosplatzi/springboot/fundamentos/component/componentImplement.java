@@ -11,4 +11,5 @@ public class componentImplement implements ComponentDependency{
     public void saludar() {
         System.out.println("Hola mundo desde mi componente");
     }
+
 }

@@ -5,6 +5,8 @@ import org.springframework.boot.context.properties.bind.ConstructorBinding;
 
 
 @ConfigurationProperties(prefix = "user")
+
+
 public class UserPojo {
     private String email;
     private String password;
