@@ -1,11 +1,16 @@
 package com.fundamentosplatzi.springboot.fundamentos.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+
+import static org.hibernate.type.descriptor.java.JdbcDateJavaType.DATE_FORMAT;
+
 
 @Entity
 @Table(name = "user")
@@ -18,9 +23,10 @@ public class User {
     @Column(length = 50)
     private String name;
 
-    @Column(length = 50)
+    @Column(length = 50, unique = true)
     private String email;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DATE_FORMAT)
     private LocalDate birthDate;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -36,6 +42,11 @@ public class User {
         this.email = email;
         this.birthDate = birthDate;
     }
+
+    public User(Long id){
+        this.id = id;
+    }
+
 
     public Long getId() {
         return id;
@@ -88,4 +99,6 @@ public class User {
         sb.append('}');
         return sb.toString();
     }
+
+
 }
